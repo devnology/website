@@ -1,0 +1,13 @@
+%h2 Events
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Title
+
+  %tbody
+    - collection.each do |event|
+      %tr
+        %td= event.title
+
+= link_to "Add event", new_backend_event_path, class: 'btn btn-default'

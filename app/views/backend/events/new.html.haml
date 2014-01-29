@@ -1,0 +1,10 @@
+%h2 Add a new event
+
+= simple_form_for([:backend, @event]) do |f|
+  = f.input :title
+  = f.input :description
+  = f.input :start_time, as: :string, input_html: { class: 'form_datetime' }
+  = f.input :end_time, as: :string, input_html: { class: 'form_datetime' }
+  .form-group
+    .col-sm-10.col-sm-offset-2
+      = f.submit 'Add event', class: 'btn btn-default'

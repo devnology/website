@@ -1,0 +1,6 @@
+%h2= resource.title
+
+= simple_form_for([resource, @registration]) do |f|
+  = f.input :name
+  = f.input :email
+  = f.submit 'Register', class: 'btn btn-default'

@@ -13,4 +13,6 @@ gem 'simple_form'
 group :test, :development do
   gem 'spinach-rails'
   gem 'database_cleaner'
+  gem 'rspec', '~> 2.13.0'
+  gem 'email_spec'
 end

@@ -1,0 +1,24 @@
+#!/bin/bash
+export RAILS_ENV=test
+
+run() {
+  time bundle exec $*
+}
+
+echo "--- Starting continuous integration build"
+
+./script/bundler
+
+echo "--- Migrate the database from scratch"
+
+run rake db:migrate:reset
+
+echo "--- Running Spinach"
+
+run spinach
+spinach=$?
+
+if [[ $spinach -ne 0 ]]; then
+  echo "--- Some tests have failed."
+  exit 1
+fi

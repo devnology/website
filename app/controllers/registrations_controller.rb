@@ -3,7 +3,16 @@ class RegistrationsController < ApplicationController
   belongs_to :event
 
   def create
-    create! { event_path(@event) }
+    create! do |success, failure|
+      failure.html { redirect_to event_path(@event) }
+      success.html {
+        RegistrationMailer.register(@event, @registration).deliver
+        redirect_to event_path(@event)
+      }
+    end
+  end
+
+  def confirm_registration
   end
 
   private

@@ -7,10 +7,12 @@
     = csrf_meta_tags
   %body.backend
     .container
-      .header
-        %ul.nav.nav-pills.pull-right
-          = menu_item(backend_events_path, 'Events')
-        %h3.text-muted Devnology back-end
       .row
-        .col-md-12
-          = yield
+        .col-md-8.col-md-offset-2
+          .header
+            %ul.nav.nav-pills.pull-right
+              = menu_item(backend_events_path, 'Events')
+            %h3.text-muted Devnology back-end
+          .row
+            .col-md-12
+              = yield

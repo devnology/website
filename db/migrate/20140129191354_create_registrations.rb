@@ -4,6 +4,7 @@ class CreateRegistrations < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.integer :event_id
+      t.boolean :confirmed, default: false
 
       t.timestamps
     end

@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title Devnology back-end
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body.backend
+    .container
+      .header
+        %ul.nav.nav-pills.pull-right
+          = menu_item(backend_events_path, 'Events')
+        %h3.text-muted Devnology back-end
+      .row
+        .col-md-12
+          = yield

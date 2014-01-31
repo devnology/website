@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20140129191354) do
     t.string   "name"
     t.string   "email"
     t.integer  "event_id"
+    t.boolean  "confirmed",  default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

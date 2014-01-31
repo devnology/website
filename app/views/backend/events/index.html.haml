@@ -1,11 +1,16 @@
-%table.table.table-striped
-  %thead
-    %tr
-      %th Title
-
-  %tbody
-    - collection.each do |event|
+- if collection.any?
+  %table.table.table-striped.events
+    %thead
       %tr
-        %td= event.title
+        %th.date Date
+        %th Title
+
+    %tbody
+      - collection.each do |event|
+        %tr
+          %td= event.start_time.strftime('%d-%m-%Y')
+          %td= event.title
+- else
+  %p There are no events..
 
 = link_to "Add event", new_backend_event_path, class: 'btn btn-default'

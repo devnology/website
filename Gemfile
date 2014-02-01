@@ -15,4 +15,5 @@ group :test, :development do
   gem 'database_cleaner'
   gem 'rspec', '~> 2.13.0'
   gem 'email_spec'
+  gem 'pry-nav'
 end

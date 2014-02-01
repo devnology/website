@@ -1,26 +1,39 @@
 class Spinach::Features::EventRegistration < Spinach::FeatureSteps
 
   include Common::EmailHelper
+  include Common::Factories
 
   step 'there is an event' do
-    Event.create(
-      title: 'Leuke bijeenkomst',
-      description: 'Tekst',
-      start_time: Time.now,
-      end_time: Time.now + 1.hour)
+    @event = create_upcoming_event
   end
 
   step 'I register for an event' do
-    visit root_path
-    click_on 'Leuke bijeenkomst'
+    visit event_path(@event)
 
-    fill_in 'Name', with: 'Iemand'
-    fill_in 'E-mail', with: 'iemand@google.com'
+    fill_in 'Name', with: 'Sinterklaas'
+    fill_in 'E-mail', with: 'sinterklaas@google.com'
     click_on 'Register'
   end
 
-  step 'I receive a confirmation e-mail' do
-    open_last_email_for('iemand@google.com')
-    current_email.default_part_body.to_s.should include('Confirm')
+  step 'I confirm my registration' do
+    open_last_email_for('sinterklaas@google.com')
+    visit_in_email('Confirm registration')
   end
+
+  step 'I confirm my registration again' do
+    visit_in_email('Confirm registration')
+  end
+
+  step 'I see a message that my registration is confirmed' do
+    page.should have_content 'Your registration is confirmed'
+  end
+
+  step 'I see my name in the list of participants' do
+    page.should have_content 'Sinterklaas'
+  end
+
+  step 'I see a message that my registration was already confirmed' do
+    page.should have_content 'You have already confirmed your registration'
+  end
+
 end

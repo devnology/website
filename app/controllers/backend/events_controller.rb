@@ -1,4 +1,5 @@
 class Backend::EventsController < Backend::ApplicationController
+
   inherit_resources
 
   def create

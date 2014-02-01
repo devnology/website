@@ -3,7 +3,9 @@ class EventsController < ApplicationController
   inherit_resources
 
   def show
-    @registration = Registration.new
+    @new_registration = Registration.new
+    @confirmed_registrations = Registration.where(
+      event_id: resource, confirmed: true)
   end
 
 end

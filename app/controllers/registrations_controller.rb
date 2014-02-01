@@ -8,6 +8,7 @@ class RegistrationsController < ApplicationController
       failure.html { redirect_to event_path(@event) }
       success.html {
         RegistrationMailer.register(@event, @registration).deliver
+        flash[:success] = 'We have send you a confirmation e-mail'
         redirect_to event_path(@event)
       }
     end

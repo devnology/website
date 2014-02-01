@@ -7,7 +7,16 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
     @event = create_upcoming_event
   end
 
-  step 'I register for an event' do
+  step 'I have registered for an event' do
+    @event = create_upcoming_event
+
+    Registration.create(
+      name: 'Sinterklaas',
+      email: 'sinterklaas@google.com',
+      event_id: @event)
+  end
+
+  step 'I register for the event' do
     visit event_path(@event)
 
     fill_in 'Name', with: 'Sinterklaas'
@@ -34,6 +43,10 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
 
   step 'I see a message that my registration was already confirmed' do
     page.should have_content 'You have already confirmed your registration'
+  end
+
+  step 'I see errors' do
+    page.should have_css('div.error')
   end
 
 end

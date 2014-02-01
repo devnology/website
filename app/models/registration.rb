@@ -3,6 +3,7 @@ class Registration < ActiveRecord::Base
   belongs_to :event
   before_create :generate_confirmation_token
   validates_presence_of :name, :email
+  validates_uniqueness_of :email, scope: :event_id
 
   protected
 

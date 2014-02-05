@@ -1,19 +1,10 @@
 class Spinach::Features::EventRegistration < Spinach::FeatureSteps
 
-  include Common::EmailHelper
-  include Common::Factories
+  include EmailHelpers
+  include Factories
 
   step 'there is an event' do
     @event = create_upcoming_event
-  end
-
-  step 'I have registered for an event' do
-    @event = create_upcoming_event
-
-    Registration.create(
-      name: 'Sinterklaas',
-      email: 'sinterklaas@google.com',
-      event_id: @event)
   end
 
   step 'I register for the event' do
@@ -29,10 +20,6 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
     visit_in_email('Confirm registration')
   end
 
-  step 'I confirm my registration again' do
-    visit_in_email('Confirm registration')
-  end
-
   step 'I see a message that my registration is confirmed' do
     page.should have_content 'Your registration is confirmed'
   end
@@ -45,8 +32,8 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
     page.should have_content 'You have already confirmed your registration'
   end
 
-  step 'I see errors' do
-    page.should have_css('div.error')
+  step 'I see a message that someone already registered with my address' do
+    page.should have_content('has already been taken')
   end
 
 end

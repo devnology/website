@@ -1,7 +1,6 @@
 class Spinach::Features::ManagingEvents < Spinach::FeatureSteps
-  step 'I am on the backend' do
-    visit backend_root_path
-  end
+
+  include CommonSteps::Backend
 
   step 'I add an event' do
     click_on 'Add event'
@@ -17,4 +16,5 @@ class Spinach::Features::ManagingEvents < Spinach::FeatureSteps
   step 'I see the event listed' do
     page.should have_content 'Titel'
   end
+
 end

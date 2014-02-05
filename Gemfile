@@ -9,6 +9,7 @@ gem 'inherited_resources'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'devise'
 
 group :test, :development do
   gem 'spinach-rails'

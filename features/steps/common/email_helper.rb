@@ -1,10 +1,8 @@
-module Common
-  module EmailHelper
+module EmailHelpers
 
-    include Spinach::DSL
+  include Spinach::DSL
 
-    include EmailSpec::Helpers
-    include EmailSpec::Matchers
+  include EmailSpec::Helpers
+  include EmailSpec::Matchers
 
-  end
 end

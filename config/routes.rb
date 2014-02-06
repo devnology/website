@@ -12,7 +12,9 @@ Devnology::Application.routes.draw do
   resources :events do
     member do
       post :register
+      post :unregister
       get :confirm_registration
+      get :confirm_unregistration
     end
   end
 

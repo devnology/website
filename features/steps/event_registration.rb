@@ -7,12 +7,28 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
     @event = create_upcoming_event
   end
 
+  step 'I have registered for an event' do
+    @event = create_upcoming_event
+    @registration = create_registration(@event)
+  end
+
   step 'I register for the event' do
     visit event_path(@event)
 
-    fill_in 'Name', with: 'Sinterklaas'
-    fill_in 'E-mail', with: 'sinterklaas@google.com'
-    click_on 'Register'
+    within '.registration' do
+      fill_in 'Name', with: 'Sinterklaas'
+      fill_in 'E-mail', with: 'sinterklaas@google.com'
+      click_on 'Register'
+    end
+  end
+
+  step 'I unregister for the event' do
+    visit event_path(@event)
+
+    within '.unregistration' do
+      fill_in 'E-mail', with: 'sinterklaas@google.com'
+      click_on 'Unregister'
+    end
   end
 
   step 'I confirm my registration' do
@@ -20,12 +36,25 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
     visit_in_email('Confirm registration')
   end
 
+  step 'I confirm my unregistration' do
+    open_last_email_for('sinterklaas@google.com')
+    visit_in_email('Confirm unregistration')
+  end
+
   step 'I see a message that my registration is confirmed' do
     page.should have_content 'Your registration is confirmed'
   end
 
+  step 'I see a message that my unregistration is confirmed' do
+    page.should have_content 'Your registration is cancelled'
+  end
+
   step 'I see my name in the list of participants' do
     page.should have_content 'Sinterklaas'
+  end
+
+  step 'I see that my name is not in the list of participants anymore' do
+    page.should_not have_content 'Sinterklaas'
   end
 
   step 'I see a message that my registration was already confirmed' do
@@ -33,7 +62,15 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
   end
 
   step 'I see a message that someone already registered with my address' do
-    page.should have_content('has already been taken')
+    page.should have_content 'has already been taken'
+  end
+
+  step 'I see a message that I am using an invalid token' do
+    page.should have_content 'You are using an invalid token for unregistration'
+  end
+
+  step 'I see a message that there is no registration with my e-mail address' do
+    page.should have_content 'There is no registration'
   end
 
 end

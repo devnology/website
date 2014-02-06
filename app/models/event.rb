@@ -7,8 +7,4 @@ class Event < ActiveRecord::Base
     registrations.where(confirmed: true)
   end
 
-  def registration(token)
-    registrations.find_by(confirmation_token: token)
-  end
-
 end

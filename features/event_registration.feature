@@ -19,3 +19,22 @@ Feature: Event registration
     When I register for the event
     And I register for the event
     Then I see a message that someone already registered with my address
+
+  Scenario: Unregister of an event
+    Given I have registered for an event
+    When I unregister for the event
+    And I confirm my unregistration
+    Then I see a message that my unregistration is confirmed
+    And I see that my name is not in the list of participants anymore
+
+  Scenario: Unable to unregister twice
+    Given I have registered for an event
+    When I unregister for the event
+    And I confirm my unregistration
+    And I confirm my unregistration
+    Then I see a message that I am using an invalid token
+
+  Scenario: Unable to unregister with an unkown e-mail address
+    Given there is an event
+    When I unregister for the event
+    Then I see a message that there is no registration with my e-mail address

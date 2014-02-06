@@ -9,4 +9,12 @@ class RegistrationMailer < ActionMailer::Base
          subject: "Confirm registration for '#{@event.title}'"
   end
 
+  def unregister(event, registration)
+    @event = event
+    @registration = registration
+
+    mail to: registration.email,
+         subject: "Confirm unregistration for '#{@event.title}'"
+  end
+
 end

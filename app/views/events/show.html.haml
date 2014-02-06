@@ -1,9 +1,17 @@
 %h2= @event.title
 
-= simple_form_for(@registration, url: register_event_path) do |f|
-  = f.input :name
-  = f.input :email
-  = f.submit 'Register', class: 'btn btn-default'
+.registration.well
+  %h4 Registration
+  = simple_form_for(@registration, url: register_event_path) do |f|
+    = f.input :name
+    = f.input :email
+    = f.submit 'Register', class: 'btn btn-default'
+
+.unregistration.well
+  %h4 Unregistration
+  = simple_form_for(@registration, url: unregister_event_path) do |f|
+    = f.input :email
+    = f.submit 'Unregister', class: 'btn btn-default'
 
 - @event.confirmed_registrations.each do |registration|
   %p= registration.name

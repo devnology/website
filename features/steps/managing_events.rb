@@ -10,6 +10,8 @@ class Spinach::Features::ManagingEvents < Spinach::FeatureSteps
     fill_in 'Description', with: 'Een verhaaltje'
     fill_in 'Start time', with: '30-01-2014 18:00'
     fill_in 'End time', with: '30-01-2014 21:00'
+    fill_in 'Registration opens', with: '01-01-2014 00:00'
+    fill_in 'Number of seats', with: 30
     click_on 'Save'
   end
 

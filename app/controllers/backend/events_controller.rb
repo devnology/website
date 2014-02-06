@@ -11,7 +11,12 @@ class Backend::EventsController < Backend::ApplicationController
   end
 
   def permitted_params
-    params.permit(event: [:title, :description, :start_time, :end_time])
+    params.permit(event: [:title,
+                          :description,
+                          :start_time,
+                          :end_time,
+                          :registration_opens,
+                          :number_of_seats])
   end
 
 end

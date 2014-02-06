@@ -1,3 +1,18 @@
 %h4 Edit event
 
-= render 'form'
+= simple_form_for([:backend, @event]) do |f|
+
+  %ul.nav.nav-tabs#event-tabs
+    = tab_item('details', 'Event details', true)
+
+  .tab-content
+    #details.tab-pane.fade.in.active
+      = f.input :title
+      = f.input :start_time, as: :bootstrap_datetimepicker
+      = f.input :end_time, as: :bootstrap_datetimepicker
+      = f.input :registration_opens, as: :bootstrap_datetimepicker
+      = f.input :number_of_seats
+      = f.input :description
+
+    = f.submit 'Save', class: 'btn btn-primary'
+    = link_to 'Cancel', backend_events_path, class: 'btn'

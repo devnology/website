@@ -1,8 +1,0 @@
-= simple_form_for([:backend, @event]) do |f|
-  = f.input :title
-  = f.input :start_time, as: :bootstrap_datetimepicker
-  = f.input :end_time, as: :bootstrap_datetimepicker
-  = f.input :description
-
-  = f.submit 'Save', class: 'btn btn-primary'
-  = link_to 'Cancel', backend_events_path, class: 'btn'

@@ -12,7 +12,7 @@
       - collection.each do |event|
         %tr
           %td= event.start_time.strftime('%d-%m-%Y')
-          %td= event.title
+          %td= link_to event.title, edit_backend_event_path(event)
           %td= event.confirmed_registrations.count
 - else
   %p There are no events..

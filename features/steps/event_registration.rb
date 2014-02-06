@@ -3,9 +3,7 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
   include EmailHelpers
   include Factories
 
-  step 'there is an event' do
-    @event = create_upcoming_event
-  end
+  include CommonSteps::Event
 
   step 'I have registered for an event' do
     @event = create_upcoming_event

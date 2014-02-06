@@ -6,9 +6,6 @@
   = f.input :password, :label => "New password", :required => true, :autofocus => true
   = f.input :password_confirmation, :label => "Confirm your new password", :required => true
 
-  .form-group
-    .col-sm-10.col-sm-offset-2
-      = f.submit 'Change my password', class: "btn btn-default"
-  .form-group
-    .col-sm-10.col-sm-offset-2
-      = render 'devise/shared/links'
+  = f.submit 'Change my password', class: "btn btn-primary"
+
+= render 'devise/shared/links'

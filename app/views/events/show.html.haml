@@ -2,10 +2,16 @@
 
 .registration.well
   %h4 Registration
-  = simple_form_for(@registration, url: register_event_path) do |f|
-    = f.input :name
-    = f.input :email
-    = f.submit 'Register', class: 'btn btn-default'
+
+  - if !@event.open_for_registration?
+    %p This is event is not open for registration
+  - elsif @event.full?
+    %p Unfortunately this event is full
+  - else
+    = simple_form_for(@registration, url: register_event_path) do |f|
+      = f.input :name
+      = f.input :email
+      = f.submit 'Register', class: 'btn btn-default'
 
 .unregistration.well
   %h4 Unregistration

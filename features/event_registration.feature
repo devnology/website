@@ -20,6 +20,16 @@ Feature: Event registration
     And I register for the event
     Then I see a message that someone already registered with my address
 
+  Scenario: Unable to register for an event that is not open for registration
+    Given there is an event that is not open for registration
+    When I view the event
+    Then I see a message that the event is not open for registration
+
+  Scenario: Unable to register for a full event
+    Given there is a full event
+    When I view the event
+    Then I see a message that the event is full
+
   Scenario: Unregister of an event
     Given I have registered for an event
     When I unregister for the event

@@ -12,4 +12,12 @@ class Event < ActiveRecord::Base
     registrations.where(confirmed: true)
   end
 
+  def full?
+    confirmed_registrations.count >= number_of_seats
+  end
+
+  def open_for_registration?
+    (registration_opens..start_time).cover?(Time.now)
+  end
+
 end

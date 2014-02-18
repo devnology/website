@@ -17,8 +17,7 @@ module ApplicationHelper
   end
 
   def current_controller?(url)
-    route = Rails.application.routes.recognize_path(url)
-    route && route[:controller] == params[:controller]
+    request.path =~ /#{url}/
   end
 
 end

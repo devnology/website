@@ -38,6 +38,11 @@ class Spinach::Features::ManagingEvents < Spinach::FeatureSteps
     click_on 'Save'
   end
 
+  step 'I view the event registrations' do
+    visit backend_events_path
+    click_on '1 / 20'
+  end
+
   step 'I see the event listed' do
     page.should have_content 'Titel'
   end
@@ -58,6 +63,10 @@ class Spinach::Features::ManagingEvents < Spinach::FeatureSteps
     find_field('Name').value.should eq nil
     find_field('Address').value.should eq nil
     find_field('City').value.should eq nil
+  end
+
+  step 'I see the registrations listed' do
+    page.should have_content 'Sinterklaas'
   end
 
   private

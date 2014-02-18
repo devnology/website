@@ -5,7 +5,10 @@ Devnology::Application.routes.draw do
   }
 
   namespace :backend do
-    resources :events
+    resources :events do
+      resources :registrations
+    end
+
     root 'events#index'
   end
 

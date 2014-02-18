@@ -21,3 +21,8 @@ Feature: Managing events
     Given there is an event with a location
     When I clear the name of the event location
     Then I see no location in the event
+
+  Scenario: View event registrations
+    Given there is an event with a registration
+    When I view the event registrations
+    Then I see the registrations listed

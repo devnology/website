@@ -1,19 +1,19 @@
 %h4 Events
 
-- if collection.any?
-  %table.table.table-striped.events
+- if @events.any?
+  %table.table.table-striped
     %thead
       %tr
-        %th.date Date
+        %th.column-small Date
         %th Title
-        %th.registrations Registrations
+        %th.column-small Registrations
 
     %tbody
-      - collection.each do |event|
+      - @events.each do |event|
         %tr
           %td= event.start_time.strftime('%d-%m-%Y')
           %td= link_to event.title, edit_backend_event_path(event)
-          %td= "#{event.confirmed_registrations.count} / #{event.number_of_seats}"
+          %td= link_to "#{event.confirmed_registrations.count} / #{event.number_of_seats}", backend_event_registrations_path(event)
 - else
   %p There are no events..
 

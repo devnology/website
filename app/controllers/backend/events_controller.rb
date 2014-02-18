@@ -6,6 +6,10 @@ class Backend::EventsController < Backend::ApplicationController
     create! { backend_events_path }
   end
 
+  def edit
+    edit! { @event.build_location unless @event.location }
+  end
+
   def update
     update! { backend_events_path }
   end
@@ -16,7 +20,13 @@ class Backend::EventsController < Backend::ApplicationController
                           :start_time,
                           :end_time,
                           :registration_opens,
-                          :number_of_seats])
+                          :number_of_seats,
+                          location_attributes: [:id,
+                                                :name,
+                                                :address,
+                                                :city,
+                                                :website,
+                                                :directions]])
   end
 
 end

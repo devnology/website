@@ -3,7 +3,8 @@
 = simple_form_for([:backend, @event]) do |f|
 
   %ul.nav.nav-tabs#event-tabs
-    = tab_item('details', 'Event details', true)
+    = tab_item('details', 'Event details', false, true)
+    = tab_item('location', 'Location', @event.location.errors.any?)
 
   .tab-content
     #details.tab-pane.fade.in.active
@@ -13,6 +14,13 @@
       = f.input :registration_opens, as: :bootstrap_datetimepicker
       = f.input :number_of_seats
       = f.input :description
+    #location.tab-pane.fade
+      = f.simple_fields_for :location do |location|
+        = location.input :name
+        = location.input :address
+        = location.input :city
+        = location.input :website
+        = location.input :directions
 
     = f.submit 'Save', class: 'btn btn-primary'
     = link_to 'Cancel', backend_events_path, class: 'btn'

@@ -16,10 +16,25 @@ class Spinach::Features::ManagingEvents < Spinach::FeatureSteps
   end
 
   step 'I change the title of the event' do
-    visit backend_events_path
-    click_on 'Leuke bijeenkomst'
+    edit_event
 
     fill_in 'Title', with: 'Andere naam'
+    click_on 'Save'
+  end
+
+  step 'I add a location to the event' do
+    edit_event_location
+
+    fill_in 'Name', with: 'Mooie locatie'
+    fill_in 'Address', with: 'Straat'
+    fill_in 'City', with: 'Stad'
+    click_on 'Save'
+  end
+
+  step 'I clear the name of the event location' do
+    edit_event_location
+
+    fill_in 'Name', with: ''
     click_on 'Save'
   end
 
@@ -29,6 +44,32 @@ class Spinach::Features::ManagingEvents < Spinach::FeatureSteps
 
   step 'I see the new name of the event listed' do
     page.should have_content 'Andere naam'
+  end
+
+  step 'I see the location in the event' do
+    edit_event_location
+
+    find_field('Name').value.should eq 'Mooie locatie'
+  end
+
+  step 'I see no location in the event' do
+    edit_event_location
+
+    find_field('Name').value.should eq nil
+    find_field('Address').value.should eq nil
+    find_field('City').value.should eq nil
+  end
+
+  private
+
+  def edit_event
+    visit backend_events_path
+    click_on 'Leuke bijeenkomst'
+  end
+
+  def edit_event_location
+    edit_event
+    click_on 'Location'
   end
 
 end

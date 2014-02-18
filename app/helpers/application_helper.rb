@@ -8,9 +8,9 @@ module ApplicationHelper
     end
   end
 
-  def tab_item(anchor, name, active = false)
-    content_tag :li, class: active ? 'active' : '' do
-      link_to "\##{anchor}", :data => { :toggle => 'tab'} do
+  def tab_item(anchor, name, errors, active = false)
+    content_tag :li, class: active ? 'active' : ''  do
+      link_to "\##{anchor}", :data => { :toggle => 'tab'}, class: errors ? 'text-danger' : '' do
         "#{name}".html_safe
       end
     end

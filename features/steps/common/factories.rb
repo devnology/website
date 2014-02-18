@@ -22,4 +22,11 @@ module Factories
                          confirmed: true)
   end
 
+  def create_location(event)
+    Location.create!(name: 'Stoomboot',
+                     address: 'Waterweg',
+                     city: 'Barcelona',
+                     event: event)
+  end
+
 end

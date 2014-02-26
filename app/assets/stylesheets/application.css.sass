@@ -1,1 +1,67 @@
 @import bootstrap
+
+$devnology-blue: #10679E
+$devnology-orange: #EB7B00
+
+body
+
+  font-family: "Open Sans"
+  font-size: 16px
+  color: #333
+
+  header
+
+    height: 85px
+    border-bottom: 2px solid $devnology-orange
+
+    img
+      height: 50px
+      margin-top: 20px
+
+    .nav-underline
+      margin-top: 38px
+
+      > li > a
+        border-radius: 0
+        background-color: inherit
+        color: $devnology-orange
+        font-size: 18px
+
+        &:hover
+          background-color: inherit
+          color: $devnology-blue
+          border-bottom: 2px solid $devnology-blue
+
+      > li.active > a
+        color: $devnology-blue
+        border-bottom: 2px solid $devnology-blue
+
+  main
+
+    .banner
+      border-bottom: 2px solid $devnology-orange
+      background: url("banner.jpg") top center
+      height: 451px
+
+      h1, h2, h3
+        font-family: "Times"
+        text-transform: uppercase
+        position: absolute
+        left: 100px
+        padding: 5px
+        color: white
+
+      h1
+        background-color: rgba($devnology-orange, 0.7)
+        top: 370px
+
+      h2
+        background-color: rgba(black, 0.9)
+        top: 300px
+
+      h3
+        background-color: rgba($devnology-orange, 0.7)
+        top: 425px
+
+    .updates
+      margin-top: 30px

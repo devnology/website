@@ -5,7 +5,22 @@
     = stylesheet_link_tag    "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
+
+    %link{ href: "http://fonts.googleapis.com/css?family=Open+Sans:300,600", rel: "stylesheet", type: "text/css" }
+
   %body
-    .container
+    %header
+      .container
+        .row
+          .col-md-10.col-md-offset-1
+            = image_tag "logo.png"
+
+            %ul.nav.nav-pills.nav-underline.pull-right
+              = menu_item(events_path, 'News')
+              = menu_item(events_path, 'Events')
+              = menu_item(events_path, 'Podcasts')
+              = menu_item(events_path, 'About us')
+
+    %main
       = bootstrap_flash
       = yield

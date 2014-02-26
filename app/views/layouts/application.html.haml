@@ -7,5 +7,11 @@
     = csrf_meta_tags
   %body
     .container
-      = bootstrap_flash
-      = yield
+      .row
+        .col-md-8.col-md-offset-2
+          .header
+            = menu_item(podcasts_path, 'Podcasts')
+          .row
+            .col-md-12
+              = bootstrap_flash
+              = yield

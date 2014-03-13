@@ -10,6 +10,10 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
+gem 'feedzirra'
+gem 'faraday'
+gem 'faraday_middleware'
+gem 'faraday_middleware-rss'
 
 group :test, :development do
   gem 'spinach-rails'

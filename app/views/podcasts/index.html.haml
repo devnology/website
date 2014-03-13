@@ -1,0 +1,6 @@
+%h3 Podcasts
+- @podcasts.each do |podcast|
+  .podcast
+    %h4= podcast.title
+    %br/
+    %p= raw podcast.description

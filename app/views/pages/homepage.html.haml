@@ -7,19 +7,22 @@
 .updates
   .container
     .row
-      .col-md-4
+      .col-md-3.col-md-offset-1
         %h2 News
 
-      .col-md-3.col-md-offset-1
+      .col-md-4
         %h2 Upcoming events
-
         - @upcoming_events.each do |event|
           .event
             =link_to event.title, event_path(event)
             %p= event.start_time.strftime('%d-%m-%Y')
 
-      .col-md-3.col-md-offset-1
+      .col-md-3
         %h2 Recent podcasts
+        - @recent_podcasts.each do |podcast|
+          .event
+            =link_to podcast.title, podcasts_path
+            %p= "published on: #{podcast.pubDate.strftime('%d-%m-%Y')}"
 
 .sponsors
   .container

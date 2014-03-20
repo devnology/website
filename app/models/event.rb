@@ -1,5 +1,7 @@
 class Event < ActiveRecord::Base
 
+  include Bootsy::Container
+
   has_many :registrations, dependent: :destroy
 
   has_one :location, dependent: :destroy

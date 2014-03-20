@@ -13,7 +13,7 @@
       = f.input :end_time, as: :bootstrap_datetimepicker
       = f.input :registration_opens, as: :bootstrap_datetimepicker
       = f.input :number_of_seats
-      = f.input :description
+      = f.input :description, as: :bootsy, input_html: { class: 'form-control' }
     #location.tab-pane.fade
       = f.simple_fields_for :location do |location|
         = location.input :name

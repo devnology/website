@@ -14,6 +14,7 @@ gem 'feedzirra'
 gem 'faraday'
 gem 'faraday_middleware'
 gem 'faraday_middleware-rss'
+gem 'bootsy'
 
 group :test, :development do
   gem 'spinach-rails'

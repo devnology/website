@@ -1,0 +1,7 @@
+en:
+  activerecord:
+    attributes:
+      admin:
+        email: E-mail
+      registration:
+        email: E-mail

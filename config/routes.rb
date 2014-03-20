@@ -1,4 +1,5 @@
 Devnology::Application.routes.draw do
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   devise_for :admins, controllers: {
     sessions: 'backend/sessions',
     passwords: 'backend/passwords'

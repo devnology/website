@@ -13,12 +13,14 @@ class FetchPodcasts
   end
 
   def podcasts
-    @conn.get('/DevnologyPodcast').body.items
+    @conn.get('/DevnologyPodcast').body.items.map do |podcast|
+      PodcastDecorator.new(podcast)
+    end
   end
 
   def podcast(guid)
     podcasts.detect do |podcast|
-      podcast.guid.content == guid
+      podcast.guid == guid
     end
   end
 

@@ -9,8 +9,8 @@
     .col-md-12
 
       - @podcasts.each do |podcast|
-        %h4= link_to podcast.title, podcast_path(podcast.guid.content)
+        %h4= link_to podcast.title, podcast_path(podcast.guid)
         .podcast
-          %p= raw truncate_html(podcast.description, length: 500)
+          %p= podcast.truncated_description
           .clearfix
         %hr/

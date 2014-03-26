@@ -7,10 +7,10 @@
 .container
   .row
     .col-md-12
-      %p= raw @podcast.description
+      %p= @podcast.description
       .row
         .col-md-4
           %audio{ controls: true }
-            %source{ src: @podcast.enclosure.url }
+            %source{ src: @podcast.url }
         .col-md-4
-          = link_to "Download podcast", @podcast.enclosure.url, class: 'btn btn-default', download: true, target: '_blank'
+          = link_to "Download podcast", @podcast.url, class: 'btn btn-default', download: true, target: '_blank'

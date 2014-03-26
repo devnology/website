@@ -1,6 +1,16 @@
-%h3 Podcasts
-- @podcasts.each do |podcast|
-  .podcast
-    %h4= podcast.title
-    %br/
-    %p= raw podcast.description
+.updates
+  .container
+    .row
+      .col-md-12
+        %h2 Podcasts
+
+.container
+  .row
+    .col-md-12
+
+      - @podcasts.each do |podcast|
+        %h4= link_to podcast.title, podcast_path(podcast.guid)
+        .podcast
+          %p= podcast.truncated_description
+          .clearfix
+        %hr/

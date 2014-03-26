@@ -15,11 +15,19 @@ gem 'faraday'
 gem 'faraday_middleware'
 gem 'faraday_middleware-rss'
 gem 'bootsy'
+gem 'truncate_html'
 
 group :test, :development do
-  gem 'spinach-rails'
   gem 'database_cleaner'
-  gem 'rspec', '~> 2.13.0'
+  gem 'shoulda-matchers'
   gem 'email_spec'
   gem 'pry-nav'
+end
+
+group :test do
+  gem 'spinach-rails'
+  gem 'rspec', '~> 2.13.0'
+  gem 'rspec-rails', '~> 2.13.0'
+  gem 'vcr'
+  gem 'webmock'
 end

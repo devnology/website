@@ -16,6 +16,12 @@ class FetchPodcasts
     @conn.get('/DevnologyPodcast').body.items
   end
 
+  def podcast(guid)
+    podcasts.detect do |podcast|
+      podcast.guid.content == guid
+    end
+  end
+
   private
 
   def cache_dir

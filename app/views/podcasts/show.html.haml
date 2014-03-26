@@ -1,0 +1,16 @@
+.updates
+  .container
+    .row
+      .col-md-12
+        %h2= @podcast.title
+
+.container
+  .row
+    .col-md-12
+      %p= raw @podcast.description
+      .row
+        .col-md-4
+          %audio{ controls: true }
+            %source{ src: @podcast.enclosure.url }
+        .col-md-4
+          = link_to "Download podcast", @podcast.enclosure.url, class: 'btn btn-default', download: true, target: '_blank'

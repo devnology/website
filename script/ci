@@ -13,17 +13,12 @@ echo "--- Migrate the database from scratch"
 
 run rake db:migrate:reset
 
-echo "--- Running RSpec"
-
-run rspec --color spec --format progress
-rspec=$?
-
 echo "--- Running Spinach"
 
 run spinach
 spinach=$?
 
-if [[ $rspec -ne 0 || $spinach -ne 0 ]]; then
+if [[ $spinach -ne 0 ]]; then
   echo "--- Some tests have failed."
   exit 1
 fi

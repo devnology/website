@@ -28,7 +28,4 @@ end
 group :test do
   gem 'spinach-rails'
   gem 'rspec', '~> 2.13.0'
-  gem 'rspec-rails', '~> 2.13.0'
-  gem 'vcr'
-  gem 'webmock'
 end

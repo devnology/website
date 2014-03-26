@@ -28,7 +28,7 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
   step 'I register for the event' do
     visit event_path(@event)
 
-    within '.registration' do
+    within '.register' do
       fill_in 'Name', with: 'Sinterklaas'
       fill_in 'E-mail', with: 'sinterklaas@google.com'
       click_on 'Register'
@@ -38,8 +38,17 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
   step 'I unregister for the event' do
     visit event_path(@event)
 
-    within '.unregistration' do
+    within '.unregister' do
       fill_in 'E-mail', with: 'sinterklaas@google.com'
+      click_on 'Unregister'
+    end
+  end
+
+  step 'I unregister for the event with an incorrect e-mail address' do
+    visit event_path(@event)
+
+    within '.unregister' do
+      fill_in 'E-mail', with: 'foutje@google.com'
       click_on 'Unregister'
     end
   end

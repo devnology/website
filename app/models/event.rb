@@ -19,6 +19,10 @@ class Event < ActiveRecord::Base
     registrations.where(confirmed: true)
   end
 
+  def available_seats
+    number_of_seats - confirmed_registrations.count
+  end
+
   def full?
     confirmed_registrations.count >= number_of_seats
   end

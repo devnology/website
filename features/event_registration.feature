@@ -44,7 +44,7 @@ Feature: Event registration
     And I confirm my unregistration
     Then I see a message that I am using an invalid token
 
-  Scenario: Unable to unregister with an unkown e-mail address
-    Given there is an event
-    When I unregister for the event
+  Scenario: Unable to unregister with an incorrect e-mail address
+    Given I have registered for an event
+    When I unregister for the event with an incorrect e-mail address
     Then I see a message that there is no registration with my e-mail address

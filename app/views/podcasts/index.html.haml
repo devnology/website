@@ -1,16 +1,18 @@
-.updates
-  .container
-    .row
-      .col-md-12
-        %h2 Podcasts
-
-.container
+.container.podcasts
   .row
-    .col-md-12
+    .col-md-10.col-md-offset-1.title
+      %h1 Podcasts
 
-      - @podcasts.each do |podcast|
-        %h4= link_to podcast.title, podcast_path(podcast.guid)
+  .row
+    .col-md-10.col-md-offset-1
+
+      - @recent_podcasts.each do |podcast|
+        %h3= link_to podcast.title, podcast_path(podcast.guid)
+
         .podcast
           %p= podcast.truncated_description
           .clearfix
-        %hr/
+
+      %h2 Archive
+      - @old_podcasts.each do |podcast|
+        %h4= link_to podcast.title, podcast_path(podcast.guid)

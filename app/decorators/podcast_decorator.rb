@@ -16,7 +16,7 @@ class PodcastDecorator < Draper::Decorator
   end
 
   def truncated_description
-    truncate_html(description, length: 500)
+    truncate_html(description, length: 400)
   end
 
 end

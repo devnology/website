@@ -1,6 +1,6 @@
 module BootstrapFlashHelper
 
-  ALERT_TYPES = [:danger, :info, :success, :warning]
+  ALERT_TYPES = ["danger", "info", "success", "warning"]
 
   def bootstrap_flash
     flash.flat_map do |type, message|

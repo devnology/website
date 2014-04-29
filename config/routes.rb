@@ -1,4 +1,5 @@
 Devnology::Application.routes.draw do
+
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   devise_for :admins, controllers: {
     sessions: 'backend/sessions',
@@ -23,6 +24,8 @@ Devnology::Application.routes.draw do
   end
 
   resources :podcasts, only: [:index, :show]
+
   get 'homepage' => 'pages#homepage'
   root 'pages#homepage'
+
 end

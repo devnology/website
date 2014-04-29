@@ -1,0 +1,18 @@
+.container.events
+  .row
+    .col-md-10.col-md-offset-1.title
+      %h1 Events
+
+  .row
+    .col-md-10.col-md-offset-1
+
+      - @recent_events.each do |event|
+        %h3= link_to event.title, event_path(event.id)
+
+        .event
+          %p= raw event.description
+          .clearfix
+
+      %h2 Archive
+      - @old_events.each do |event|
+        %h4= link_to event.title, event_path(event.id)

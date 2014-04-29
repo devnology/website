@@ -1,5 +1,12 @@
 class EventsController < ApplicationController
 
+  def index
+    events = Event.all
+
+    @recent_events = events.first(3)
+    @old_events = events - @recent_events
+  end
+
   def show
     @event = Event.find(params[:id])
     @registration = Registration.new

@@ -1,12 +1,12 @@
 class LibsynService
 
   def initialize
-    @conn = Faraday.new(url: 'http://feeds.feedburner.com/') do |faraday|
+    @connection = Faraday.new(url: 'http://feeds.feedburner.com/') do |faraday|
       faraday.response :rss
       faraday.response :caching do
         ActiveSupport::Cache::FileStore.new cache_dir,
                                             namespace: 'podcast',
-                                            :expires_in => 3600
+                                            :expires_in => 900
       end
 
       faraday.adapter Faraday.default_adapter
@@ -14,7 +14,7 @@ class LibsynService
   end
 
   def podcasts
-    @conn.get('/DevnologyPodcast').body.items.map do |podcast|
+    @connection.get('/DevnologyPodcast').body.items.map do |podcast|
       Podcast.new(podcast)
     end
   end

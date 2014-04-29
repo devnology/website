@@ -1,4 +1,4 @@
-class PodcastDecorator < Draper::Decorator
+class Podcast < Draper::Decorator
   include TruncateHtmlHelper
 
   delegate_all

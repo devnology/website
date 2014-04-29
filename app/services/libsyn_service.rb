@@ -1,4 +1,4 @@
-class FetchPodcasts
+class LibsynService
 
   def initialize
     @conn = Faraday.new(url: 'http://feeds.feedburner.com/') do |faraday|
@@ -8,13 +8,14 @@ class FetchPodcasts
                                             namespace: 'podcast',
                                             :expires_in => 3600
       end
-      faraday.adapter  Faraday.default_adapter
+
+      faraday.adapter Faraday.default_adapter
     end
   end
 
   def podcasts
     @conn.get('/DevnologyPodcast').body.items.map do |podcast|
-      PodcastDecorator.new(podcast)
+      Podcast.new(podcast)
     end
   end
 

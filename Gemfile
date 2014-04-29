@@ -17,6 +17,8 @@ gem 'faraday_middleware-rss'
 gem 'bootsy'
 gem 'truncate_html'
 gem 'draper'
+gem 'twitter'
+gem 'twitter-text'
 
 group :test, :development do
   gem 'database_cleaner'

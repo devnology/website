@@ -2,10 +2,10 @@ class TwitterService
 
   def initialize
     @client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = "TyFo3VRFAlo8F5BoWx9v8MBDA"
-      config.consumer_secret     = "qPYI3QRVntOujGzLcKDCoMPREaYNGOlm8FQ26YQjgJR9Em32sv"
-      config.access_token        = "61209889-Vy6bGokyUq7E5cjohNZlPnD1DIJdQUKSG46aPPusZ"
-      config.access_token_secret = "1IxRYNlGGEVlP8X51HgKbtV2XAcuKvgssanm5Ud5HoduH"
+      config.consumer_key        = TWITTER[:consumer_key]
+      config.consumer_secret     = TWITTER[:consumer_secret]
+      config.access_token        = TWITTER[:access_token]
+      config.access_token_secret = TWITTER[:access_token_secret]
     end
   end
 

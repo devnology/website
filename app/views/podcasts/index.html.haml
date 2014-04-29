@@ -4,7 +4,7 @@
       %h1 Podcasts
 
   .row
-    .col-md-10.col-md-offset-1
+    .col-md-6.col-md-offset-1
 
       - @recent_podcasts.each do |podcast|
         %h3= link_to podcast.title, podcast_path(podcast.guid)
@@ -13,6 +13,16 @@
           %p= podcast.truncated_description
           .clearfix
 
+    .col-md-4.block
+      %h4 iTunes
+      %p All our podcasts are published to iTunes. If you like to, you can subscribe to the feed.
+      =link_to 'Subscribe to iTunes', 'http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=335170002&subMediaType=Audio'
+      %h4 RSS feed
+      %p As an alternative to iTunes we offer you a RSS feed via Feedburner.
+      =link_to 'Subscribe to RSS feed', 'http://feeds.feedburner.com/DevnologyPodcast'
+
+  .row
+    .col-md-10.col-md-offset-1
       %h2 Archive
       - @old_podcasts.each do |podcast|
         %h4= link_to podcast.title, podcast_path(podcast.guid)

@@ -4,16 +4,16 @@
       %h1= @podcast.title
 
   .row
-    .col-md-10.col-md-offset-1.listen
-      .row
-        .col-md-5.col-md-offset-1
-          %h4 Listen to this podcast
-          %audio{ controls: true }
-            %source{ src: @podcast.url }
-        .col-md-4.col-md-offset-1
-          %h4 Download this podcast
-          = link_to "Download podcast", @podcast.url, class: 'btn btn-default', download: @podcast.title, target: '_blank'
-
-  .row
-    .col-md-10.col-md-offset-1.podcast
+    .col-md-6.col-md-offset-1.podcast.text
       %p= @podcast.description
+
+    .col-md-4.block
+      %h4 Details
+      %p= "This podcast was published on #{@podcast.date.strftime('%d-%m-%Y')} and lasts for #{@podcast.duration} minutes"
+
+      %h4 Listen to this podcast
+      %audio{ controls: true }
+        %source{ src: @podcast.url }
+      %h4 Download this podcast
+      = link_to "Download podcast", @podcast.url, class: 'btn btn-default', download: @podcast.title, target: '_blank'
+

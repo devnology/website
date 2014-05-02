@@ -19,4 +19,12 @@ class Podcast < Draper::Decorator
     truncate_html(description, length: 350)
   end
 
+  def date
+    object.pubDate
+  end
+
+  def duration
+    object.itunes_duration.content
+  end
+
 end

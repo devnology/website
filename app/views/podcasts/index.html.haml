@@ -4,14 +4,12 @@
       %h1 Podcasts
 
   .row
-    .col-md-6.col-md-offset-1
-
+    .col-md-6.col-md-offset-1.text
       - @recent_podcasts.each do |podcast|
-        %h3= link_to podcast.title, podcast_path(podcast.guid)
-
         .podcast
+          %h3= link_to podcast.title, podcast_path(podcast.guid)
+          %p.date= "published on: #{podcast.date.strftime('%d-%m-%Y')} / duration: #{podcast.duration}"
           %p= podcast.truncated_description
-          .clearfix
 
     .col-md-4.block
       %h4 iTunes

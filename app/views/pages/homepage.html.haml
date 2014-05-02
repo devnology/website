@@ -27,16 +27,3 @@
           .update
             =link_to podcast.title, podcast_path(podcast.guid)
             %p.date= "published on: #{podcast.pubDate.strftime('%d-%m-%Y')}"
-
-.sponsors
-  .container
-    .row
-      .col-md-2.col-md-offset-2
-        = image_tag "qwan.png"
-      .col-md-2.col-md-offset-1
-        = image_tag "finalist.png"
-      .col-md-2.col-md-offset-1
-        = image_tag "macaw.png"
-    .row
-      .col-md-6.col-md-offset-3
-        %h3 Devnology is a non-profit organisation and thus dependant on sponsors. We are very grateful to our sponsors. Thanks to our sponsors all Devnology events are free!

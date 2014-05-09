@@ -16,10 +16,13 @@
 
       .col-md-4
         %h2 News @devnologynl
-        - @recent_tweets.each do |tweet|
-          .update
-            %p= tweet.text
-            %p.date= tweet.date.strftime('%d-%m-%Y at %H:%M')
+        - if @recent_tweets
+          - @recent_tweets.each do |tweet|
+            .update
+              %p= tweet.text
+              %p.date= tweet.date.strftime('%d-%m-%Y at %H:%M')
+        - else
+          %p Twitter feed is currently not available
 
       .col-md-3
         %h2 Recent podcasts

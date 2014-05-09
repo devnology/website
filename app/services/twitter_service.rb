@@ -10,10 +10,16 @@ class TwitterService
   end
 
   def recent_tweets
-    Rails.cache.fetch("recent_tweets", :expires_in => 15.minutes) do
-      @client.home_timeline.take(3).map do |tweet|
-        Tweet.new(tweet)
+    begin
+      Rails.cache.fetch("recent_tweets", :expires_in => 15.minutes) do
+        @client.home_timeline.take(3).map do |tweet|
+          Tweet.new(tweet)
+        end
       end
+    rescue Twitter::Error
+      Rails.logger.error($!)
+      Rails.logger.error($!.backtrace.join("\n"))
+      return nil
     end
   end
 

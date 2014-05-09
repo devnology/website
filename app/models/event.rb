@@ -1,5 +1,6 @@
 class Event < ActiveRecord::Base
 
+  include TruncateHtmlHelper
   include Bootsy::Container
 
   has_many :registrations, dependent: :destroy
@@ -29,6 +30,10 @@ class Event < ActiveRecord::Base
 
   def open_for_registration?
     (registration_opens..start_time).cover?(Time.now)
+  end
+
+  def truncated_description
+    truncate_html(description, length: 350)
   end
 
   private

@@ -20,4 +20,12 @@ module ApplicationHelper
     request.path =~ /#{url}/
   end
 
+  def event_date(event)
+    if event.location.present?
+      "#{event.location.name}, #{event.location.city} / #{event.start_time.strftime('%d-%m-%Y')}"
+    else
+      "#{event.start_time.strftime('%d-%m-%Y')}"
+    end
+  end
+
 end

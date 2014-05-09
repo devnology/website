@@ -2,10 +2,7 @@
   .row
     .col-md-10.col-md-offset-1.title
       %h1= @event.title
-      - if @event.location.present?
-        %p.date= "#{@event.location.name}, #{@event.location.city} - #{@event.start_time.strftime('%d-%m-%Y')}"
-      - else
-        %p.date= "#{@event.start_time.strftime('%d-%m-%Y')}"
+      %p.date= event_date(@event)
 
   .row
     .col-md-6.col-md-offset-1.details

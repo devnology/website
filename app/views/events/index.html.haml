@@ -1,18 +1,24 @@
 .container.events
   .row
     .col-md-10.col-md-offset-1.title
-      %h1 Events
+      %h1 Upcoming events
 
   .row
-    .col-md-10.col-md-offset-1
-
+    .col-md-6.col-md-offset-1.text
       - @recent_events.each do |event|
-        %h3= link_to event.title, event_path(event.id)
-
         .event
-          %p= raw event.description
-          .clearfix
+          %h3= link_to event.title, event_path(event.id)
+          %p.date= event_date(event)
+          %p= event.truncated_description
 
-      %h2 Archive
+      %h2.archive Archive
       - @old_events.each do |event|
         %h4= link_to event.title, event_path(event.id)
+
+    .col-md-4.block
+      %h4 About our events
+      %p Devnology meetings are aimed to bring together passionate developers to exchange ideas and experience, to discuss and network - geek to geek.
+      %p Our events are free and organised every first wednesday of the month.
+      %h4 Interested in sponsoring?
+      %p We are always looking for sponsors for our events. Sponsoring an event requires you to open your office for a bunch of developers and provide them with some food and drinks.
+      =link_to 'Send us an e-mail at secretariaat@devnology.nl', 'mailto:secretariaat@devnology.nl'

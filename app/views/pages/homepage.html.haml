@@ -11,8 +11,8 @@
         %h2 Upcoming events
         - @upcoming_events.each do |event|
           .update
-            =link_to event.title, event_path(event)
-            %p.date= event.start_time.strftime('%d-%m-%Y')
+            = link_to event.title, event_path(event)
+            %p.date= event_date(event)
 
       .col-md-4
         %h2 News @devnologynl
@@ -28,5 +28,5 @@
         %h2 Recent podcasts
         - @recent_podcasts.each do |podcast|
           .update
-            =link_to podcast.title, podcast_path(podcast.guid)
+            = link_to podcast.title, podcast_path(podcast.guid)
             %p.date= "published on: #{podcast.pubDate.strftime('%d-%m-%Y')}"

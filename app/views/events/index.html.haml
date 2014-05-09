@@ -5,7 +5,7 @@
 
   .row
     .col-md-6.col-md-offset-1.text
-      - @recent_events.each do |event|
+      - @upcoming_events.each do |event|
         .event
           %h3= link_to event.title, event_path(event.id)
           %p.date= event_date(event)

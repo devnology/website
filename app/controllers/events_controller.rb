@@ -1,10 +1,10 @@
 class EventsController < ApplicationController
 
   def index
-    events = Event.all
+    events = Event.all.order("end_time DESC")
 
-    @recent_events = events.first(3)
-    @old_events = events - @recent_events
+    @upcoming_events = Event.upcoming
+    @old_events = events - @upcoming_events
   end
 
   def show

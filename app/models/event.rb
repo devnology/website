@@ -16,6 +16,10 @@ class Event < ActiveRecord::Base
                         :registration_opens,
                         :number_of_seats
 
+  def self.upcoming
+    where("end_time > ?", Time.now).order("end_time")
+  end
+
   def confirmed_registrations
     registrations.where(confirmed: true)
   end

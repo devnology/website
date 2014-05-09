@@ -32,6 +32,10 @@ group :test do
   gem 'rspec', '~> 2.13.0'
 end
 
+group :production do
+  gem 'pg'
+end
+
 group :deployment do
   gem 'capistrano', '~> 3.1.0'
   gem 'capistrano-rails', '~> 1.1.0'

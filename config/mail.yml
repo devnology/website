@@ -1,0 +1,7 @@
+host: ''
+
+smtp:
+  address: ''
+  port: ''
+  user_name: ''
+  password: ''

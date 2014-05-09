@@ -78,10 +78,15 @@ Devnology::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.default_url_options = { :host => 'devnology.nl' }
+  MAIL = YAML.load_file(Rails.root.join('config', 'mail.yml'))
+
+  config.action_mailer.default_url_options = { :host => MAIL['host'] }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address              => "localhost",
-    :port                 => 25,
+    :address              => MAIL['smtp']['address'],
+    :authentication       => :plain,
+    :user_name            => MAIL['smtp']['user_name'],
+    :password             => MAIL['smtp']['password'],
+    :port                 => MAIL['smtp']['port'],
     :enable_starttls_auto => false }
 end

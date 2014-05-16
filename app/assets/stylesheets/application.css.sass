@@ -31,9 +31,30 @@ body
       margin-top: 20px
 
     .nav-underline
-      margin-top: 38px
+      float: right !important
+      top: 32px
 
-      > li > a
+      @media (max-width: 768px)
+        top: 16px
+
+        .navbar-toggle
+          border: 2px solid $devnology-orange
+          margin-bottom: 15px
+
+          .icon-bar
+            background-color: $devnology-orange
+
+        li > a
+          background-color: white !important
+          border-bottom: none !important
+          border-left: 2px solid $devnology-orange
+          border-right: 2px solid $devnology-orange
+          z-index: 9999
+
+        .navbar-nav
+          border-bottom: 2px solid $devnology-orange
+
+      li > a
         border-radius: 0
         font-size: 18px
 
@@ -45,10 +66,11 @@ body
           color: $devnology-blue
           border-bottom: 2px solid $devnology-blue
 
-      > li.active > a
+      li.active > a
         color: $devnology-blue
         background-color: inherit
         border-bottom: 2px solid $devnology-blue
+        font-weight: bold
 
         &:hover
           background-color: inherit

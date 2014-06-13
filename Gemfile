@@ -5,13 +5,13 @@ gem 'sqlite3'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
-gem 'inherited_resources'
+gem 'inherited_resources', '~> 1.4.1'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'feedjira'
-gem 'faraday', '0.8.9'
+gem 'faraday'
 gem 'faraday_middleware'
 gem 'faraday_middleware-rss'
 gem 'bootsy'
@@ -29,6 +29,7 @@ end
 
 group :test do
   gem 'spinach-rails'
+  gem 'spinach', '~> 0.8.9'
   gem 'rspec', '~> 2.13.0'
 end
 

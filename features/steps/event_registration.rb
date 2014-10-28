@@ -87,8 +87,8 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
     page.should have_content 'has already been taken'
   end
 
-  step 'I see a message that I am using an invalid token' do
-    page.should have_content 'You are using an invalid token for unregistration'
+  step 'I see a message that I cannot unregister' do
+    page.should have_content 'We cannot find your registration. Did you already unregister?'
   end
 
   step 'I see a message that there is no registration with my e-mail address' do

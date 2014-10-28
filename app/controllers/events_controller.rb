@@ -19,7 +19,7 @@ class EventsController < ApplicationController
 
     if @registration.save
       RegistrationMailer.register(@event, @registration).deliver
-      flash[:success] = 'We have send you an e-mail to confirm your registration'
+      flash[:success] = 'We have sent you an e-mail to confirm your registration'
     end
 
     render :show
@@ -31,7 +31,7 @@ class EventsController < ApplicationController
 
     if registration.present?
       RegistrationMailer.unregister(event, registration).deliver
-      flash[:success] = 'We have send you an e-mail to confirm your unregistration'
+      flash[:success] = 'We have sent you an e-mail to confirm your unregistration'
     else
       flash[:danger] = "There is no registration with the e-mail address '#{params[:registration][:email]}'"
     end
@@ -65,7 +65,7 @@ class EventsController < ApplicationController
       flash[:success] = 'Your registration is cancelled, see you next time!'
       registration.destroy
     else
-      flash[:info] = 'You are using an invalid token for unregistration'
+      flash[:info] = 'We cannot find your registration. Did you already unregister?'
     end
 
     redirect_to event_path(event)

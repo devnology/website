@@ -5,7 +5,8 @@ This is the Devnology website, as (soon) deployed at <http://devnology.nl>.
 
 
 ### Dependencies & setting up
-- Install Ruby in any way you see fit.
+- Install Ruby in any way you see fit, i.e. with rbenv on a Mac: https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x
+- Install bundler: `gem install bundler` followed by `rbenv rehash` when using rbenv
 - run `bundle install` to install all gems needed by this application.
 
 

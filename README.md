@@ -5,8 +5,9 @@ This is the Devnology website, as (soon) deployed at <http://devnology.nl>.
 
 
 ### Dependencies & setting up
-- Install Ruby in any way you see fit, on a Mac use rbenv
-- run `./script/bundler` to install all gems needed by this application.
+- Install Ruby in any way you see fit, on a Mac run `brew install rbenv ruby-build`.
+- Install PostgreSQL, on a Mac run `brew install postgresql`.
+- Run `./script/bundler` to install all gems needed by this application.
 
 
 ### Running the server

@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Presentaties Community Day"
+---
+
+Het is inmiddels alweer een bijna een week geleden dat een groep van ongeveer 80 software ontwikkelaars uit Nederland zich verenigden in de kelders van VX Company op de [Devnology Community Day](http://devnology.nl/nl/blog/7-verslagen/57-community-day-agenda). Een dag met presentaties, workshops en discussies waarin volop kennis werd gedeeld over alles wat met software te maken heeft. Als je er deze dag niet bij kon zijn, of juist nog eens wat materiaal terug wilt lezen, dan kun je in deze blogpost (of direct op het [SlideShare event](http://www.slideshare.net/event/devnology-community-day)) de presentaties nog eens rustig bekijken.
+
+Op het moment van schrijven zijn nog niet alle presentaties van deze dag gepubliceerd. De sprekers die hun presentatie niet in het lijstje zien staan roepen we dan ook op om het materiaal te delen met de community en ze op te sturen naar [dit e-mailadres](mailto:secretariaat@devnology.nl) of te publiceren in het eerder genoemde SlideShare event.
+<div style="width:577px;margin:auto;"><object style="margin:0px" mce_style="margin:0px" width="575" height="410"><param name="movie" value="http://static.slidesharecdn.com/swf/multiwidget.swf"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://static.slidesharecdn.com/swf/multiwidget.swf" mce_src="http://static.slidesharecdn.com/swf/multiwidget.swf" flashvars="feedurl=event/11863&amp;widgettitle=Devnology%3A%20Community%20Day" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="575" height="410"></object>
+<div style="font-size:11px;font-family:tahoma,arial;height:26px;padding-top:2px;text-align:left;">[![SlideShare](http://static.slidesharecdn.com/swf/logo_embd.png)](http://www.slideshare.net/?src=multiwidget "SlideShare") | [Get your SlideShare Playlist](http://www.slideshare.net/widgets/playlist "Get your SlideShare Playlist")</div></div>

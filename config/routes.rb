@@ -26,6 +26,8 @@ Devnology::Application.routes.draw do
     end
   end
 
+  resources :blogs, only: [:index, :show]
+
   resources :podcasts, only: [:index, :show]
 
   get 'homepage' => 'pages#homepage'

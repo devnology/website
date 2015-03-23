@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @next_event = @upcoming_events.first
 
     @recent_podcasts = LibsynService.new.podcasts.first(3)
-    @recent_tweets = TwitterService.new.recent_tweets
+    @recent_blogs = Blog.last(3)
   end
 
 end

@@ -15,14 +15,11 @@
             %p.date= event_date(event)
 
       .col-md-4
-        %h2 News @devnologynl
-        - if @recent_tweets
-          - @recent_tweets.each do |tweet|
-            .update
-              %p= tweet.text
-              %p.date= tweet.date.strftime('%d-%m-%Y at %H:%M')
-        - else
-          %p Twitter feed is currently not available
+        %h2 Recent blog posts
+        - @recent_blogs.each do |blog|
+          .update
+            = link_to blog.title, blog_path(blog)
+            %p.date= "published on: #{blog.created_at.strftime('%d-%m-%Y')}"
 
       .col-md-3
         %h2 Recent podcasts

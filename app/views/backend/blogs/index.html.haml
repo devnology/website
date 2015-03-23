@@ -1,0 +1,18 @@
+%h4 Blogs
+
+- if @blogs.any?
+  %table.table.table-striped
+    %thead
+      %tr
+        %th.column-small Date
+        %th Title
+
+    %tbody
+      - @blogs.each do |blog|
+        %tr
+          %td= blog.created_at.strftime('%d-%m-%Y')
+          %td= link_to blog.title, edit_backend_blog_path(blog)
+- else
+  %p There are no blog posts..
+
+= link_to "Add blog post", new_backend_blog_path, class: 'btn btn-primary'

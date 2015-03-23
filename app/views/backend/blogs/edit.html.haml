@@ -1,0 +1,8 @@
+%h4 Edit blog post
+
+= simple_form_for([:backend, @blog]) do |f|
+  = f.input :title
+  = f.input :content, as: :bootsy, input_html: { class: 'form-control' }
+
+  = f.submit 'Save', class: 'btn btn-primary'
+  = link_to 'Cancel', backend_blogs_path, class: 'btn'

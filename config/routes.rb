@@ -11,6 +11,9 @@ Devnology::Application.routes.draw do
       resources :registrations
     end
 
+    resources :blogs do
+    end
+
     root 'events#index'
   end
 

@@ -29,4 +29,9 @@ module Factories
                      event: event)
   end
 
+  def create_blog_post
+    Blog.create!(title: 'Leuke blog post',
+                 content: 'Tekst')
+  end
+
 end

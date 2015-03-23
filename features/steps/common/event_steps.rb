@@ -19,5 +19,6 @@ module CommonSteps
       @event = create_upcoming_event
       create_registration(@event)
     end
+
   end
 end

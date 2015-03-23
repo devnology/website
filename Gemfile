@@ -19,6 +19,7 @@ gem 'truncate_html'
 gem 'draper'
 gem 'twitter'
 gem 'twitter-text'
+gem 'redcarpet'
 
 group :test, :development do
   gem 'database_cleaner'

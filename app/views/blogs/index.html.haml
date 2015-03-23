@@ -1,0 +1,22 @@
+.container.blogs
+  .row
+    .col-md-10.col-md-offset-1.title
+      %h1 Blog posts
+
+  .row
+    .col-md-6.col-md-offset-1.text
+      - @blogs.each do |blog|
+        .event
+          %h3= link_to blog.title, blog_path(blog.id)
+          %p.date= blog.created_at.strftime('%d-%m-%Y')
+          %div= raw blog.content
+
+    .col-md-4.block
+      %h4 News @devnologynl
+      - if @recent_tweets
+        - @recent_tweets.each do |tweet|
+          .update
+            %p= tweet.text
+            %p.date= tweet.date.strftime('%d-%m-%Y at %H:%M')
+      - else
+        %p Twitter feed is currently not available

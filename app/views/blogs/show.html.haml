@@ -6,7 +6,7 @@
 
   .row
     .col-md-6.col-md-offset-1.details
-      %div= raw @blog.content
+      %div= markdown(@blog.content)
 
     .col-md-4.block
       %h4 News @devnologynl

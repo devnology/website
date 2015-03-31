@@ -21,3 +21,25 @@ Dir['app/posts/*.md'].each do |fname|
 
   file.close
 end
+
+connection = ActiveRecord::Base.connection
+
+sql = File.read('db/events.sql')
+statements = sql.split(/;$/)
+statements.pop
+
+ActiveRecord::Base.transaction do
+  statements.each do |statement|
+    connection.execute(statement)
+  end
+end
+
+sql = File.read('db/locations.sql')
+statements = sql.split(/;$/)
+statements.pop
+
+ActiveRecord::Base.transaction do
+  statements.each do |statement|
+    connection.execute(statement)
+  end
+end

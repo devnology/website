@@ -46,4 +46,10 @@ PDC or Teched, Microsoft Developer Days, Software Developer Event / Conference, 
 
 **Q: What are you going to read or investigate as a result of this second Devnology meeting?**
 
-*   [Mike Taulty](http://www.google.com/search?q=mike+tautlty&amp;sourceid=ie7&amp;rls=com.microsoft:en-US:IE-SearchBox&amp;ie=&amp;oe=)'s blog*   The book "[Dynamics of Software Development](http://www.amazon.com/Dynamics-Software-Development-Jim-McCarthy/dp/1556158238)", by Jim McCarthy*   The book "[Code Complete](http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670)", by Steve McConnell*   [Joel Spolsky](http://www.joelonsoftware.com/)'s podcasts*   Using [RealVNC](http://www.realvnc.com/) as a way to allow pair programming without sitting next to eachother*   Screencasts from the [TED](http://www.ted.com/) website*   The book "[Object Design: Roles, Responsibilities, and Collaborations](http://www.amazon.com/Object-Design-Responsibilities-Collaborations-Addison-Wesley/dp/0201379430)", by Rebecca Wirf's-Brock
+*   [Mike Taulty](http://www.google.com/search?q=mike+tautlty&amp;sourceid=ie7&amp;rls=com.microsoft:en-US:IE-SearchBox&amp;ie=&amp;oe=)'s blog
+*   The book "[Dynamics of Software Development](http://www.amazon.com/Dynamics-Software-Development-Jim-McCarthy/dp/1556158238)", by Jim McCarthy
+*   The book "[Code Complete](http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670)", by Steve McConnell
+*   [Joel Spolsky](http://www.joelonsoftware.com/)'s podcasts
+*   Using [RealVNC](http://www.realvnc.com/) as a way to allow pair programming without sitting next to eachother
+*   Screencasts from the [TED](http://www.ted.com/) website
+*   The book "[Object Design: Roles, Responsibilities, and Collaborations](http://www.amazon.com/Object-Design-Responsibilities-Collaborations-Addison-Wesley/dp/0201379430)", by Rebecca Wirf's-Brock

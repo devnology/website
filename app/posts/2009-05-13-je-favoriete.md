@@ -12,10 +12,12 @@ In de laatste Ronde Tafel bijeenkomst, op woensdag 6 mei, is er gediscussieerd o
 *   Rémy van Duijkeren: een blog van [Chris Alcock](http://blog.cwa.me.uk/) waarin hij elke dag een selectie maakt van interessante blog-posts, zodat jij dat niet hoeft te doen
 *   Jeroen van den Bos: wetenschappelijke papers, op het gebied van bijvoorbeeld software engineering, op [arXiv.org](http://arxiv.org/)
 *   [Frans Bouma](http://weblogs.asp.net/FBouma/): terug naar de basis met het boek [Algorithms in C](http://www.amazon.com/Algorithms-Parts-1-4-Fundamentals-Structures/dp/0201314525) van Robert Sedgewick
-*   [Rick van der Arend](http://www.rickvanderarend.nl/): innovatie, nieuwe ideeën, allerlei artikelen en presentaties die over de wereld moeten worden verspreid: [TED](http://www.ted.com/)*   [Wes Oldenbeuving](http://narnach.blogspot.com/): de boeken van de uitgever [the Pragmatic Programmers ](http://www.pragprog.com/)
+*   [Rick van der Arend](http://www.rickvanderarend.nl/): innovatie, nieuwe ideeën, allerlei artikelen en presentaties die over de wereld moeten worden verspreid: [TED](http://www.ted.com/)
+*   [Wes Oldenbeuving](http://narnach.blogspot.com/): de boeken van de uitgever [the Pragmatic Programmers ](http://www.pragprog.com/)
 *   Dennie Bastiaan: de screencasts van [Daniel Moth](http://channel9.msdn.com/posts/DanielMoth/), waarin hij bijvoorbeeld niet alleen uitlegt wat LINQ is, maar wat erachter schuilt
 *   [Dennis Doomen](http://www.dennisdoomen.net/): richtlijnen voor Pair Programming op InfoQ: [Successfully Adopting Pair Programming](http://www.infoq.com/articles/adopting-pair-programming)
-*   [Soemirno Kartosoewito](http://soemirno.net/): de podcasts van [Java Posse](http://javaposse.com/), discussies over alles op het gebied van software ontwikkeling in Java*   [Michel van den Berg](http://www.promontis.nl/News.aspx): de blogs van [Scott Guthrie](http://weblogs.asp.net/scottgudutch/about.aspx) in het Nederlands vertaald
+*   [Soemirno Kartosoewito](http://soemirno.net/): de podcasts van [Java Posse](http://javaposse.com/), discussies over alles op het gebied van software ontwikkeling in Java
+*   [Michel van den Berg](http://www.promontis.nl/News.aspx): de blogs van [Scott Guthrie](http://weblogs.asp.net/scottgudutch/about.aspx) in het Nederlands vertaald
 *   Stefan van Stekelenburg: de blog [Channel 9](http://channel9.msdn.com/) over alles op het gebied van Microsoft software ontwikkeling
 *   Mark Giesen: de [MSDN blogs](http://blogs.msdn.com/) waar alle webcasts en whitepapers van de Microsoft product-teams zijn te vinden
 

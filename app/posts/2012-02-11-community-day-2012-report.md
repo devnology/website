@@ -9,7 +9,7 @@ Devnology&rsquo;s third Community Day took place at [Vx Company](http://www.vxco
 
 ## You shall not pass
 
-[](images/stories/Events/communityday/comdayA1.jpg)
+![](images/stories/Events/communityday/comdayA1.jpg)
 
 Not exactly an activity, but it is becoming a tradition for the Community Day: upon arrival, we find closed gates. After some 45 minutes, a security guard shows up, and once inside, things start heating up. Literally: it was roughly -15 C outside, with blue skies and some sunshine, making it not all that unpleasant. I have never skied, but I imagine this is what apres ski feels like.
 

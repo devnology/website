@@ -57,6 +57,8 @@ class EventsController < ApplicationController
         registration.confirmed = true
         registration.save
       end
+    else
+      flash[:info] = 'We cannot find your registration. Did you register?'
     end
 
     redirect_to event_path(event)

@@ -43,3 +43,5 @@ ActiveRecord::Base.transaction do
     connection.execute(statement)
   end
 end
+
+ActiveRecord::Base.connection.reset_pk_sequence!('events')

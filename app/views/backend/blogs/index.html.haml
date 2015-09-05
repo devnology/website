@@ -1,5 +1,7 @@
 %h4 Blogs
 
+= link_to "Add blog post", new_backend_blog_path, class: 'btn btn-primary'
+
 - if @blogs.any?
   %table.table.table-striped
     %thead
@@ -14,5 +16,3 @@
           %td= link_to blog.title, edit_backend_blog_path(blog)
 - else
   %p There are no blog posts..
-
-= link_to "Add blog post", new_backend_blog_path, class: 'btn btn-primary'

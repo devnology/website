@@ -1,8 +1,9 @@
 .banner
   - if @next_event
-    %h2 Next event
-    %h1= @next_event.title
-    %h3= @next_event.start_time.strftime('%d-%m-%Y')
+    = link_to event_path(@next_event) do
+      %h2 Next event
+      %h1= @next_event.title
+      %h3= @next_event.start_time.strftime('%d-%m-%Y')
 
 .updates
   .container

@@ -2,6 +2,10 @@ class Backend::BlogsController < Backend::ApplicationController
 
   inherit_resources
 
+  def collection
+    @blogs ||= end_of_association_chain.order('created_at DESC')
+  end
+
   def create
     create! { backend_blogs_path }
   end

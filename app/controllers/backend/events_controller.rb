@@ -2,6 +2,10 @@ class Backend::EventsController < Backend::ApplicationController
 
   inherit_resources
 
+  def collection
+    @events ||= end_of_association_chain.order('start_time DESC')
+  end
+
   def create
     create! { backend_events_path }
   end

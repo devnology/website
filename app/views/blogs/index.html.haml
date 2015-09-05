@@ -11,6 +11,9 @@
         %div= markdown(@most_recent_blog.content)
 
     .col-md-4.block
+      %h4 Newsletter
+      %p= link_to 'Subscribe to our newsletter', 'http://devnology.us4.list-manage1.com/subscribe?u=6bd0ddede117436baeda27903&id=6116b82b57'
+      %p= link_to 'Newsletter archive', 'http://us4.campaign-archive1.com/home/?u=6bd0ddede117436baeda27903&id=6116b82b57'
       %h4 News @devnologynl
       - if @recent_tweets
         - @recent_tweets.each do |tweet|

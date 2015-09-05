@@ -1,5 +1,7 @@
 %h4 Events
 
+= link_to "Add event", new_backend_event_path, class: 'btn btn-primary'
+
 - if @events.any?
   %table.table.table-striped
     %thead
@@ -16,5 +18,3 @@
           %td= link_to "#{event.confirmed_registrations.count} / #{event.number_of_seats}", backend_event_registrations_path(event)
 - else
   %p There are no events..
-
-= link_to "Add event", new_backend_event_path, class: 'btn btn-primary'

@@ -1,6 +1,6 @@
 %p Hi #{@registration.name}!
 
-%p Thanks for your registration for our event '#{@event.title}' on #{@event.start_time.strftime('%A %B %d')}
+%p You have requested registration for our event '#{@event.title}' on #{@event.start_time.strftime('%A %B %d')}
 %p Please confirm your registration by clicking the following link:
 %p= link_to 'Confirm registration', confirm_registration_event_url(@event, params: { token: @registration.confirmation_token })
 

@@ -23,7 +23,7 @@ class EventsController < ApplicationController
 
       if @registration.save
         RegistrationMailer.register(@event, @registration).deliver_now
-        flash[:success] = 'We have sent you an e-mail to confirm your registration'
+        flash[:success] = 'We have sent you an e-mail, please use the link to confirm your registration'
       end
     end
 
@@ -36,7 +36,7 @@ class EventsController < ApplicationController
 
     if registration.present?
       RegistrationMailer.unregister(event, registration).deliver_now
-      flash[:success] = 'We have sent you an e-mail to confirm your unregistration'
+      flash[:success] = 'We have sent you an e-mail, please use the link to confirm your unregistration'
     else
       flash[:danger] = "There is no registration with the e-mail address '#{params[:registration][:email]}'"
     end

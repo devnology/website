@@ -1,6 +1,7 @@
 %p Hi #{@registration.name}!
 
-%p Please confirm your unregistration for the event '#{@event.title}' by clicking the following link:
+%p You have requested unregistration for the event '#{@event.title}'
+%p Please confirm your unregistration by clicking the following link:
 %p= link_to 'Confirm unregistration', confirm_unregistration_event_url(@event, params: { token: @registration.confirmation_token })
 
 %p

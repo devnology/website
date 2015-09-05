@@ -60,5 +60,3 @@ Well, no. As Michel expertly showed, even though human language is all about con
 It later dawned on me that there may perhaps be more of a link between programming and classic poetry: both force you to take your ideas, and fit them into a strict harness. Any thoughts on that, Michel?
 
 ###### About the photos: you may know my photo gear is pretty retro, and I usually touch up the most annoying artifacts after scanning. This time, the weather (condensation along the bottom of the film strip) and the processing laboratory (numerous slanted, almost horizontal scratches) got the better of me.
-
-Document edited with [HTML-Cleaner.com](http://www.html-cleaner.com)

@@ -28,5 +28,3 @@ After this introduction it was hands to the keyboard to try out how to fit as ma
 [Learn a language : LISP](http://www.slideshare.net/devnology/learn-a-language-lisp "Learn a language : LISP")
 
 The solution for the exercises are available by downloading [solutions.clj](share/solutions.clj)
-
-Document edited with [HTML-Cleaner.com](http://www.html-cleaner.com)

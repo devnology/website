@@ -22,5 +22,3 @@ Maarten Metz
 </div>
 
 {artsexylightbox flickrNumberOfImages="26" flickr="Devnology" flickrSet="72157627829265606"} {/artsexylightbox}
-
-Document edited with [HTML-Cleaner.com](http://www.html-cleaner.com)

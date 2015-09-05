@@ -8,7 +8,7 @@ class CreateLocations < ActiveRecord::Migration
       t.text :directions
       t.integer :event_id
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

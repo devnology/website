@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.1'
+gem 'rails', '4.2.4'
 gem 'sqlite3'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
-gem 'inherited_resources', '~> 1.4.1'
+gem 'inherited_resources'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'

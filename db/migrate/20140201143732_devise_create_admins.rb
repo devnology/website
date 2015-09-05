@@ -13,7 +13,7 @@ class DeviseCreateAdmins < ActiveRecord::Migration
       t.string   :last_sign_in_ip
 
       t.string   :name
-      t.timestamps
+      t.timestamps null: false
     end
 
     add_index :admins, :email,                :unique => true

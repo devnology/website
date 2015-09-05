@@ -6,7 +6,7 @@ class CreateRegistrations < ActiveRecord::Migration
       t.integer :event_id
       t.boolean :confirmed, default: false
 
-      t.timestamps
+      t.timestamps null: false
     end
 
     add_index :registrations, :event_id

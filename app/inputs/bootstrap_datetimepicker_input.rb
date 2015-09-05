@@ -1,5 +1,5 @@
 class BootstrapDatetimepickerInput < SimpleForm::Inputs::Base
-  def input
+  def input(wrapper_options)
     value = formatted_date(object.send(attribute_name))
 
     text_field_options = input_html_options.dup

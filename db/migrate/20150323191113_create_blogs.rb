@@ -4,7 +4,7 @@ class CreateBlogs < ActiveRecord::Migration
       t.string :title
       t.text :content
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

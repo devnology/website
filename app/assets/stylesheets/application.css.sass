@@ -30,29 +30,12 @@ body
       height: 50px
       margin-top: 20px
 
+      @media (max-width: 768px)
+        height: 40px
+
     .nav-underline
       float: right !important
       top: 32px
-
-      @media (max-width: 768px)
-        top: 16px
-
-        .navbar-toggle
-          border: 2px solid $devnology-orange
-          margin-bottom: 15px
-
-          .icon-bar
-            background-color: $devnology-orange
-
-        li > a
-          background-color: white !important
-          border-bottom: none !important
-          border-left: 2px solid $devnology-orange
-          border-right: 2px solid $devnology-orange
-          z-index: 9999
-
-        .navbar-nav
-          border-bottom: 2px solid $devnology-orange
 
       li > a
         border-radius: 0
@@ -76,6 +59,29 @@ body
           background-color: inherit
           color: $devnology-blue
           border-bottom: 2px solid $devnology-blue
+
+      @media (max-width: 768px)
+        top: 15px
+
+        .navbar-toggle
+          border: 1px solid $devnology-orange
+          margin-bottom: 15px
+
+          .icon-bar
+            background-color: $devnology-orange
+
+        li > a
+          background-color: white !important
+          border-bottom: none !important
+          border-left: 1px solid $devnology-orange
+          border-right: 1px solid $devnology-orange
+          z-index: 9999
+
+        .navbar-nav
+          border-bottom: 1px solid $devnology-orange
+          position: absolute
+          margin-top: 11px
+          right: 20px
 
   main
 
@@ -130,6 +136,9 @@ body
 
     .updates
       padding: 40px 0
+
+      @media (max-width: 768px)
+        padding: 20px 0
 
       .update
         margin-bottom: 15px

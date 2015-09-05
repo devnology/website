@@ -1,7 +1,7 @@
 class LibsynService
 
   def initialize
-    @connection = Faraday.new(url: 'http://feeds.feedburner.com/') do |faraday|
+    @connection = Faraday.new(url: 'http://devnology.libsyn.com/') do |faraday|
       faraday.response :rss
       faraday.response :caching do
         ActiveSupport::Cache::FileStore.new cache_dir,
@@ -14,7 +14,7 @@ class LibsynService
   end
 
   def podcasts
-    @connection.get('/DevnologyPodcast').body.items.map do |podcast|
+    @connection.get('/rss').body.items.map do |podcast|
       Podcast.new(podcast)
     end
   end

@@ -21,6 +21,11 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
     create_registration(@event)
   end
 
+  step 'there is an event with no limit' do
+    @event = create_upcoming_event
+    @event.update_attribute(:number_of_seats, 0)
+  end
+
   step 'I view the event' do
     visit event_path(@event)
   end
@@ -101,6 +106,10 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
 
   step 'I see a message that the event is full' do
     page.should have_content 'Unfortunately this event is full'
+  end
+
+  step 'I do not see a message that the event is full' do
+    page.should_not have_content 'Unfortunately this event is full'
   end
 
 end

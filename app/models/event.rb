@@ -1,7 +1,6 @@
 class Event < ActiveRecord::Base
 
   include TruncateHtmlHelper
-  include Bootsy::Container
 
   has_many :registrations, dependent: :destroy
 

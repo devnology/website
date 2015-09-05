@@ -21,7 +21,6 @@ class Backend::EventsController < Backend::ApplicationController
                           :end_time,
                           :registration_opens,
                           :number_of_seats,
-                          :bootsy_image_gallery_id,
                           location_attributes: [:id,
                                                 :name,
                                                 :address,

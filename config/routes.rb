@@ -35,9 +35,13 @@ Devnology::Application.routes.draw do
   root 'pages#homepage'
 
   get '/:language/blog/:section/:id-:title', to: redirect('/blogs/%{title}'), constraints: { id: /\d+/ }
+  get '/:language/blog/*other', to: redirect('/blogs')
   get '/:language/podcast/:section/:id-:title', to: redirect('/podcasts/%{title}'), constraints: { id: /\d+/ }
+  get '/:language/podcast/*other', to: redirect('/podcasts')
   get '/nl/bijeenkomsten/details/:id-:title', to: redirect('/events/%{title}'), constraints: { id: /\d+/ }
+  get '/nl/bijeenkomsten/*other', to: redirect('/events')
   get '/en/meetings/details/:id-:title', to: redirect('/events/%{title}'), constraints: { id: /\d+/ }
+  get '/en/meetings/*other', to: redirect('/events')
 
   get '/:language/podcast', to: redirect('/podcasts')
   get '/:language/blog', to: redirect('/blogs')

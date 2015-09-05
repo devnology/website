@@ -7,14 +7,17 @@
 .updates
   .container
     .row
-      .col-md-3.col-md-offset-1
+      .col-md-4.col-md-offset-1
         %h2 Upcoming events
-        - @upcoming_events.each do |event|
-          .update
-            = link_to event.title, event_path(event)
-            %p.date= event_date(event)
+        - if @upcoming_events.empty?
+          %p Currently there are no upcoming events
+        - else
+          - @upcoming_events.each do |event|
+            .update
+              = link_to event.title, event_path(event)
+              %p.date= event_date(event)
 
-      .col-md-4
+      .col-md-3
         %h2 Recent blog posts
         - @recent_blogs.each do |blog|
           .update

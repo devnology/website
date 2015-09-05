@@ -5,11 +5,14 @@
 
   .row
     .col-md-6.col-md-offset-1.text
-      - @upcoming_events.each do |event|
-        .event
-          %h3= link_to event.title, event_path(event.id)
-          %p.date= event_date(event)
-          %p= event.truncated_description
+      - if @upcoming_events.empty?
+        %p Currently there are no upcoming events
+      - else
+        - @upcoming_events.each do |event|
+          .event
+            %h3= link_to event.title, event_path(event.id)
+            %p.date= event_date(event)
+            %p= event.truncated_description
 
       %h2.archive Archive
       - @old_events.each do |event|

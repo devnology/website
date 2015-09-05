@@ -31,7 +31,10 @@ class Event < ActiveRecord::Base
   end
 
   def full?
-    confirmed_registrations.count >= number_of_seats
+    if number_of_seats == 0
+        false
+    else
+        confirmed_registrations.count >= number_of_seats
   end
 
   def open_for_registration?

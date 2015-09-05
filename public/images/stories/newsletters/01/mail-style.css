@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-image: url(bg-mail-line.png);
+	background-repeat: repeat-x;
+}
+.tekst {font-family: "Trebuchet MS"; font-size: small; color: #000000; }
+.titel {font-family: "Trebuchet MS"; font-size: large; color: #FFFFFF; font-weight: bold; }
+.koptekst {font-size: medium; color: #000000; font-family: "Trebuchet MS";}
+.begroeting {font-family: "Trebuchet MS"; font-size: medium; color: #FFFFFF; }
+ul.lijst li {
+	font-family: "Trebuchet MS"; font-size: small; color: #000000;
+	list-style-image: url('star-bullet.png');
+}

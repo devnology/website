@@ -8,25 +8,23 @@
     = csrf_meta_tags
 
   %body
-    %header
+    %header.navbar
       .container
         .row
           .col-md-10.col-md-offset-1
-            = link_to root_path do
-              = image_tag "logo.png"
-
-            .navbar.nav-underline
-              .navbar-header
-                %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse"}
-                  %span.icon-bar
-                  %span.icon-bar
-                  %span.icon-bar
-              .collapse.navbar-collapse
-                %ul.nav.navbar-nav
-                  = menu_item(blogs_path, 'Blog')
-                  = menu_item(events_path, 'Events')
-                  = menu_item(podcasts_path, 'Podcasts')
-                  = menu_item(aboutus_path, 'About us')
+            .navbar-header
+              = link_to root_path, :class => "navbar-brand" do
+                = image_tag "logo.png"
+              %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse"}
+                %span.icon-bar
+                %span.icon-bar
+                %span.icon-bar
+            .collapse.navbar-collapse
+              %ul.nav.navbar-nav
+                = menu_item(blogs_path, 'Blog')
+                = menu_item(events_path, 'Events')
+                = menu_item(podcasts_path, 'Podcasts')
+                = menu_item(aboutus_path, 'About us')
 
     %main
       = bootstrap_flash

@@ -30,6 +30,8 @@ Devnology::Application.routes.draw do
   resources :podcasts, only: [:index, :show]
 
   get 'homepage' => 'pages#homepage'
+  get 'aboutus' => 'pages#aboutus'
+
   root 'pages#homepage'
 
 end

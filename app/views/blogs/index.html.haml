@@ -5,11 +5,10 @@
 
   .row
     .col-md-6.col-md-offset-1.text
-      - @blogs.each do |blog|
-        .event
-          %h3= link_to blog.title, blog_path(blog.id)
-          %p.date= blog.created_at.strftime('%d-%m-%Y')
-          %div= markdown(blog.content)
+      .event
+        %h3= link_to @most_recent_blog.title, blog_path(@most_recent_blog.id)
+        %p.date= @most_recent_blog.created_at.strftime('%d-%m-%Y')
+        %div= markdown(@most_recent_blog.content)
 
     .col-md-4.block
       %h4 News @devnologynl
@@ -20,3 +19,9 @@
             %p.date= tweet.date.strftime('%d-%m-%Y at %H:%M')
       - else
         %p Twitter feed is currently not available
+
+  .row
+    .col-md-10.col-md-offset-1
+      %h2 Archive
+      - @old_blogs.each do |blog|
+        %h4= link_to blog.title, blog_path(blog.id)

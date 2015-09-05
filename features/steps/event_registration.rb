@@ -36,7 +36,7 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
     within '.register' do
       fill_in 'Name', with: 'Sinterklaas'
       fill_in 'E-mail', with: 'sinterklaas@google.com'
-      click_on 'Register'
+      click_on 'Count me in!'
     end
   end
 
@@ -101,7 +101,7 @@ class Spinach::Features::EventRegistration < Spinach::FeatureSteps
   end
 
   step 'I see a message that the event is not open for registration' do
-    page.should have_content 'This is event is not open for registration'
+    page.should have_content 'This event is not open for registration'
   end
 
   step 'I see a message that the event is full' do

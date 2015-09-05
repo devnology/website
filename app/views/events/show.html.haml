@@ -19,7 +19,7 @@
           = simple_form_for(@registration, url: register_event_path) do |f|
             = f.input :name
             = f.input :email
-            = f.submit 'Register', class: 'btn btn-default'
+            = f.submit 'Count me in!', class: 'btn btn-default'
 
       - if @event.confirmed_registrations.any?
         .unregister

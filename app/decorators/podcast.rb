@@ -27,4 +27,8 @@ class Podcast < Draper::Decorator
     object.itunes_duration.content
   end
 
+  def slug
+    object.title.parameterize
+  end
+
 end

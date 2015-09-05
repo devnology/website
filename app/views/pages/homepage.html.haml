@@ -28,5 +28,5 @@
         %h2 Recent podcasts
         - @recent_podcasts.each do |podcast|
           .update
-            = link_to podcast.title, podcast_path(podcast.guid)
+            = link_to podcast.title, podcast_path(podcast.slug)
             %p.date= "published on: #{podcast.pubDate.strftime('%d-%m-%Y')}"

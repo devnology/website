@@ -19,9 +19,9 @@ class LibsynService
     end
   end
 
-  def podcast(guid)
+  def podcast(slug)
     podcasts.detect do |podcast|
-      podcast.guid == guid
+      podcast.slug == slug
     end
   end
 

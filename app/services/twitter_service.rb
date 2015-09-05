@@ -12,7 +12,7 @@ class TwitterService
   def recent_tweets
     begin
       Rails.cache.fetch("recent_tweets", :expires_in => 15.minutes) do
-        @client.home_timeline.take(3).map do |tweet|
+        @client.user_timeline.take(3).map do |tweet|
           Tweet.new(tweet)
         end
       end

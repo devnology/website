@@ -14,12 +14,17 @@ class EventsController < ApplicationController
 
   def register
     @event = Event.find(params[:id])
-    @registration = Registration.new(registration_params)
-    @registration.event = @event
 
-    if @registration.save
-      RegistrationMailer.register(@event, @registration).deliver_now
-      flash[:success] = 'We have sent you an e-mail to confirm your registration'
+    if @event.full?
+      flash[:danger] = "Unfortunately the event is full"
+    else
+      @registration = Registration.new(registration_params)
+      @registration.event = @event
+
+      if @registration.save
+        RegistrationMailer.register(@event, @registration).deliver_now
+        flash[:success] = 'We have sent you an e-mail to confirm your registration'
+      end
     end
 
     render :show

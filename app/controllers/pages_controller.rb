@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @next_event = @upcoming_events.first
 
     @recent_podcasts = LibsynService.new.podcasts.first(3)
-    @recent_blogs = Blog.last(3)
+    @recent_blogs = Blog.order(created_at: :desc).first(3)
   end
 
 end

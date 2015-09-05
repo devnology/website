@@ -19,6 +19,7 @@ gem 'draper'
 gem 'twitter'
 gem 'twitter-text'
 gem 'redcarpet'
+gem 'friendly_id'
 
 group :test, :development do
   gem 'database_cleaner'

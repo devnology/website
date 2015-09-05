@@ -2,6 +2,9 @@ class Event < ActiveRecord::Base
 
   include TruncateHtmlHelper
 
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :finders]
+
   has_many :registrations, dependent: :destroy
 
   has_one :location, dependent: :destroy

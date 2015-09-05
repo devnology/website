@@ -10,13 +10,13 @@
       - else
         - @upcoming_events.each do |event|
           .event
-            %h3= link_to event.title, event_path(event.id)
+            %h3= link_to event.title, event_path(event)
             %p.date= event_date(event)
             %p= event.truncated_description
 
       %h2.archive Archive
       - @old_events.each do |event|
-        %h4= link_to event.title, event_path(event.id)
+        %h4= link_to event.title, event_path(event)
 
     .col-md-4.block
       %h4 About our events

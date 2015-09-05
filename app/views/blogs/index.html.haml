@@ -6,7 +6,7 @@
   .row
     .col-md-6.col-md-offset-1.text
       .event
-        %h3= link_to @most_recent_blog.title, blog_path(@most_recent_blog.id)
+        %h3= link_to @most_recent_blog.title, blog_path(@most_recent_blog)
         %p.date= @most_recent_blog.created_at.strftime('%d-%m-%Y')
         %div= markdown(@most_recent_blog.content)
 
@@ -24,4 +24,4 @@
     .col-md-10.col-md-offset-1
       %h2 Archive
       - @old_blogs.each do |blog|
-        %h4= link_to blog.title, blog_path(blog.id)
+        %h4= link_to blog.title, blog_path(blog)

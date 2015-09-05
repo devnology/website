@@ -3,7 +3,7 @@ layout: post
 title: "Report CodeFest Space Invaders"
 ---
 
-![](images/stories/Events/p847_big.jpg)Voor de [maart bijeenkomst ](en/meetings/details/44-code-fest-space-invaders)was het weer eens tijd om achter de knoppen te kruipen. Een bescheiden groepje deelnemers had het op zich genomen om het huiswerk te maken, namelijk een implementatie van het klassieke spel Space Invaders.
+![](/images/stories/Events/p847_big.jpg)Voor de [maart bijeenkomst ](en/meetings/details/44-code-fest-space-invaders)was het weer eens tijd om achter de knoppen te kruipen. Een bescheiden groepje deelnemers had het op zich genomen om het huiswerk te maken, namelijk een implementatie van het klassieke spel Space Invaders.
 
 Deze bijeenkomst werd gehost door [IHomer](http://www.ihomer.nl) in hun nieuwe clubhuis te Breda. Na een gezamelijke maaltijd van Nederlands-Aziatische oorsprong kregen de deelnemers om beurten de gelegenheid hun benadering te demonstreren.
 

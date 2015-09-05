@@ -3,7 +3,7 @@ layout: post
 title: "Domain modelling with the F# type system: Make illegal states unrepresentable"
 ---
 
-![](images/stories/articles/domain-modeling-whatswrong.jpg)
+![](/images/stories/articles/domain-modeling-whatswrong.jpg)
 
 A review of the Devnology F# Meetup with Scott Wlaschin by Aage ten Hengel  
 
@@ -13,7 +13,7 @@ Around seven o’clock everybody made their way to the beautiful, old-fashioned 
 
 Scott addressed the fundamentals of F# (and functional programming) fast pacing through a couple of slides, but giving room for questions at all times. Scott comes across as a kind, passionate and funny man (“for those who don’t know what a service is, it’s just a microservice without the ‘micro’ in front of it” – addressing the current microservice fad). He has a clear and visual way of explaining what makes functional programming unique.
 
-![](images/stories/articles/domain-modeling-domain.jpg)
+![](/images/stories/articles/domain-modeling-domain.jpg)
 
 Functional programming focusses on a few central building blocks: Functions (well, yeah), Composition (chaining functions makes a service, chaining services makes a use-case) and Types, which is the topic of this meetup.  
 

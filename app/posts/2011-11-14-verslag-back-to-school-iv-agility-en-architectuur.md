@@ -28,4 +28,4 @@ Ik heb erg genoten van de avond! Zoals altijd roept een bijeenkomst als deze bij
 
 Devnology Back to School 2011 is mede mogelijk gemaakt door Humiq
 
-[![](images/stories/sponsors/humiq.jpg)](http://humiq.nl)
+[![](/images/stories/sponsors/humiq.jpg)](http://humiq.nl)

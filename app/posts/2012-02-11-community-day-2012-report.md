@@ -9,7 +9,7 @@ Devnology&rsquo;s third Community Day took place at [Vx Company](http://www.vxco
 
 ## You shall not pass
 
-![](images/stories/Events/communityday/comdayA1.jpg)
+![](/images/stories/Events/communityday/comdayA1.jpg)
 
 Not exactly an activity, but it is becoming a tradition for the Community Day: upon arrival, we find closed gates. After some 45 minutes, a security guard shows up, and once inside, things start heating up. Literally: it was roughly -15 C outside, with blue skies and some sunshine, making it not all that unpleasant. I have never skied, but I imagine this is what apres ski feels like.
 
@@ -22,7 +22,7 @@ I liked the way he walked us through the various features and advantages of Clou
 ## To inifinity, and beyond!
 
 
-![](images/stories/Events/communityday/comdayA2.jpg)
+![](/images/stories/Events/communityday/comdayA2.jpg)
 
 
 
@@ -38,7 +38,7 @@ On a slightly less related note, it was her birthday!
 ## Clojurescript
 
 
-![](images/stories/Events/communityday/comdayA4.jpg)
+![](/images/stories/Events/communityday/comdayA4.jpg)
 
 
 
@@ -49,7 +49,7 @@ What I didn&rsquo;t like so much is that there was too much material for the res
 ## A programming language is a language too, right?
 
 
-![](images/stories/Events/communityday/comdayA5.jpg)
+![](/images/stories/Events/communityday/comdayA5.jpg)
 
 
 

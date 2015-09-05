@@ -3,7 +3,7 @@ layout: post
 title: "Why our next event is not a Pecha Kucha night"
 ---
 
-![](images/stories/brand.jpg)We originally programmed our monthly[ event for Januari ](en/meetings/details/42-een-avond-met-inhoud)to be a Pecha Kucha night.&nbsp;The Pecha Kucha format is real simple: a presentation of 20 slides that are shown 20 seconds each.
+![](/images/stories/brand.jpg)We originally programmed our monthly[ event for Januari ](en/meetings/details/42-een-avond-met-inhoud)to be a Pecha Kucha night.&nbsp;The Pecha Kucha format is real simple: a presentation of 20 slides that are shown 20 seconds each.
 
 I'm sure our community does not want the same type of event over and over, so we think it's good to experiment with different formats, and this one looked like an interesting way to share a lot of ideas in a single meetup.&nbsp;
 

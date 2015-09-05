@@ -3,7 +3,7 @@ layout: post
 title: "Visual Studio 2012 Launch event"
 ---
 
-![](images/stories/vstudio2012launch.png)
+![](/images/stories/vstudio2012launch.png)
 
 Als je ontwikkeld met .Net zal het je vast niet zijn ontgaan dat Visual Studio 2012 inmiddels beschikbaar is. Visual Studio 2012 betekent een mijlpaal op het gebied van Application Lifecycle Management (ALM) en het ontwikkelen van modern applicaties voor Windows Phone en Windows 8.
 

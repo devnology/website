@@ -16,4 +16,4 @@ Na een uitgebreid buffet werd het doel van het eerste deel van de avond vastgest
 
 Het tweede deel van de avond stond in het teken van persoonlijke ambities. Een voor een werden de plannen voor het komende jaar uit de doeken gedaan door Coen, Ruben, Michel, Vincent, Riccardo, Eric Jan, Pieter Joost en Arne. Een greep uit een aantal vrij-vertaalde quotes: 'ik ga volgend jaar van baan wisselen', 'ik maak een einde aan mijn carriëre als PowerPoint architect', 'ik ga verder bouwen aan mijn eigen bedrijf', 'mijn timing moet beter, ik loop altijd vooruit op ontwikkelingen in het vakgebied', 'ik blijf gewoon waar ik zit, ik heb een hernieuwde motivatie gevonden om er wat moois van te maken' en 'misschien stap ik wel over naar de Microsoft wereld'.
 
-![](images/stories/img_0361.jpg)
+![](/images/stories/img_0361.jpg)

@@ -3,7 +3,7 @@ layout: post
 title: "Global Day of Coderetreat 2011"
 ---
 
-[![](images/stories/Events/gdcr.png)](http://globalday.coderetreat.org/)
+[![](/images/stories/Events/gdcr.png)](http://globalday.coderetreat.org/)
 
 On Saturday the 3rd of December Devnology organised the Dutch participation for the [Global Day Of Code Retreat.](http://globalday.coderetreat.org/)
 

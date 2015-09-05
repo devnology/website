@@ -5,7 +5,7 @@ title: "Learn a new language: Pharo"
 
 Dit verslag is geschreven door Kees Kremer ([@kremerk](https://twitter.com/kremerk "Kees Kremer")). Bedankt Kees!
 
-![Learn a Language: Pharo](images/stories/articles/pharo.jpg)  
+![Learn a Language: Pharo](/images/stories/articles/pharo.jpg)  
 
 Op 1 April mochten we in Arnhem kennis maken met de taal Pharo. Luminis had voor ons haar faciliteiten beschikbaar gesteld. De meeting werd afgetrapt met pizza en een drankje.
 

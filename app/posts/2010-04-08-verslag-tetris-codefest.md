@@ -5,7 +5,7 @@ title: "Verslag Tetris codefest"
 
 <span class="info">Dit verslag is geschreven door Mendelt Siebenga([@mendelt](http://twitter.com/mendelt)) . Bedankt Mendelt!</span>
 
-[![](images/stories/Events/tetris.xkcd.png)](http://www.xkcd.com/724/)Op woensdag 7 April waren we welkom op het Delftse kantoor van [OGD
+[![](/images/stories/Events/tetris.xkcd.png)](http://www.xkcd.com/724/)Op woensdag 7 April waren we welkom op het Delftse kantoor van [OGD
 ](http://www.ogd.nl/)voor het Devnology Tetris Codefest. De OGD heeft een makkelijk bereikbaar
  kantoor aan de rand van Delft met op de bovenste verdieping een kantine
  voorzien van bar, dakterras, flipperkast en een arcade machine. Kortom

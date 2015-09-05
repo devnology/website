@@ -10,7 +10,7 @@
 
     .col-md-4.block
       .register
-        %h4 Register
+        %h4 Register for this event
         - if !@event.open_for_registration?
           This event is not open for registration
         - elsif @event.full?

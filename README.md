@@ -31,7 +31,8 @@ and visit <http://localhost:3000>.
     ./script/ci
 
 ### Deployment
-...
+
+    cap production deploy
 
 
 ## Contributing
